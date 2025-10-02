@@ -140,7 +140,7 @@ const evaluateRocketLauncher = createWeaponModule((input) => {
 const WeaponPerformanceChart = ({ data, lines, verticalLineX, title }: { data: any[], lines: { key: string; color: string }[], verticalLineX?: number, title: string }) => (
   <div>
     <h4 className="text-center font-semibold mb-2 text-sm">{title}</h4>
-    <ResponsiveContainer width="100%" height={130}>
+    <ResponsiveContainer width="100%" height={120}>
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.2)" />
         <XAxis dataKey="x" type="number" domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} allowDataOverflow={true} tick={{ fill: 'white', fontSize: 12 }} />
@@ -157,7 +157,7 @@ const WeaponPerformanceChart = ({ data, lines, verticalLineX, title }: { data: a
 const FuzzyShapeChart = ({ data, lines, verticalLineX, title }: { data: any[], lines: { key: string; color: string }[], verticalLineX?: number, title: string }) => (
   <div>
     <h4 className="text-center font-semibold mb-2 text-sm">{title}</h4>
-    <ResponsiveContainer width="100%" height={130}>
+    <ResponsiveContainer width="100%" height={120}>
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.2)" />
         <XAxis dataKey="x" type="number" domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} allowDataOverflow={true} tick={{ fill: 'white', fontSize: 12 }} />
