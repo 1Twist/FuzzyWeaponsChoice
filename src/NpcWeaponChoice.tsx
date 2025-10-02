@@ -157,12 +157,10 @@ const WeaponPerformanceChart = ({ data, lines, verticalLineX, title }: { data: a
 const FuzzyShapeChart = ({ data, lines, verticalLineX, title }: { data: any[], lines: { key: string; color: string }[], verticalLineX?: number, title: string }) => (
   <div>
     <h4 className="text-center font-semibold mb-2 text-sm">{title}</h4>
-    <ResponsiveContainer width="100%" height={160}>
+    <ResponsiveContainer width="100%" height={130}>
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.2)" />
-        {/* Eixo X (Universo da Desejabilidade): Vai de 0 a 100 */}
         <XAxis dataKey="x" type="number" domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} allowDataOverflow={true} tick={{ fill: 'white', fontSize: 12 }} />
-        {/* Eixo Y (Grau de Pertinência): Vai de 0 a 1, como antes */}
         <YAxis type="number" domain={[0, 1]} tick={{ fill: 'white', fontSize: 12 }} />
         <Tooltip wrapperClassName="text-sm bg-gray-800/80 backdrop-blur-sm rounded-md border-gray-700" contentStyle={{ color: 'white', backgroundColor: 'rgba(30, 41, 59, 0.8)' }} />
         <Legend wrapperStyle={{ fontSize: "12px" }} />
